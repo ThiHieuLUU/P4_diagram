@@ -1,21 +1,7 @@
-start
--> started;
-repeat
--> no;
-:Write;
--> send to review;
-:Reviews;
--> endrepeat;
-repeat while (was it proper?)
-->yes;
-:some action;
-stop
-@enduml
-
 @startuml
 |Utilisateur|
 start
-:Créer nouveau tournoi;
+:Créer un nouveau tournoi;
 |Système|
 : Demander à l'utilisateur des informations \n (nom, lieu, date, nbr de tours, liste des joueurs,\n contrôle temps, description);
 
@@ -40,7 +26,7 @@ else
 endif
 
 'repeat
-:Envoyer la liste de paires d'un tour à utilisateur;
+:Envoyer la liste de paires d'un tour à l'utilisateur;
 |Utilisateur|
 :Créer/Commencer un tour;
 |Système|
