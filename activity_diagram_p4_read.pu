@@ -1,0 +1,18 @@
+@startuml
+|Utilisateur|
+start
+:Consulter une liste avec ou sans critère de trie\n (Liste de tous les acteurs;\n Liste de tous les joueurs d'un tournoi; \n Liste de tous les tournois; \n Liste de tous les tours d'un tournoi; \n Liste de tous les matchs d'un tournoi);
+|Système|
+: Connecter à BDD;
+: Récupérer la liste correspondante;
+if (avec critère de trie ?) then
+->non;
+else
+->oui;
+: Trier la liste selon la demande de l'utilisateur;
+endif
+: Envoyer la liste à l'utilisateur;
+|Utilisateur|
+:Voir la liste demandée;
+stop
+@enduml
